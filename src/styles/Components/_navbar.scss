@@ -1,0 +1,21 @@
+.logo{
+}
+
+.nav-container{
+    display: grid;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-areas: "logo nav-container__nav";
+    
+    
+    &__nav{
+        display: flex;
+        justify-content: space-around;
+        color: $color-primary;
+    }
+}
+.home:hover, .about:hover{
+    text-decoration: underline;
+}
