@@ -1,20 +1,59 @@
+//##########//
+//## Logo ##//
+//##########//
+
 .logo{
+    width: 210.32px;
+    height: 68px;
+
+    //## Mobile screen ##//
+    @include desktop-mobile{
+        width: 145px;
+        height: 47px;
+        & img{
+            width: 100%;
+        }
+    }
 }
 
+//################//
+//## Navigation ##//
+//################//
+
 .nav-container{
-    display: grid;
+    display: flex;
     align-items: center;
-    margin: auto;
-    width: 100%;
-    grid-template-columns: 2fr 1fr ;
-    grid-template-areas: "logo nav-container__nav";
-    
+    justify-content: space-between;
+    margin: 40px auto 63px;
+    width: 100%;  
+    height: 68px;  
     
     &__nav{
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-end;
         color: $color-primary;
+        font-size: 24px;
+        width: 20%;
+        & h5{
+            padding-left: 25px;
+            font-weight: 500;
+        }
+        
+        //## Mobile screen ##//
+        @include desktop-mobile {
+                font-size: 12px;
+                text-transform: uppercase;
+                width: auto;
+                & h5{
+                    padding-left: 15px;
+                }
+        }
     }
+    @include desktop-mobile {
+        margin: 10px auto;
+    }
+
+
 }
 .home:hover, .about:hover{
     text-decoration: underline;

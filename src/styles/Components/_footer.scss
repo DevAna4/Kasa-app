@@ -1,0 +1,26 @@
+footer {
+    background-color: $color-footer;
+    margin: 0 -100px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-end;
+    margin-top: 43px;
+    padding: 10px;
+    height: 175px;
+    line-height: 142.6%;
+
+    & p{
+        color: $color-text-card;
+    }
+        
+    //## Mobile screen ##//
+    @include desktop-mobile {
+        justify-content: center;
+        padding: 15px;
+        
+        & p {
+            font-size: 12px;
+        }
+    }
+}
