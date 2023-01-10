@@ -2,11 +2,11 @@
 
 import React from 'react';
 
-function ContainerProduct() {
+function ContainerProduct({ cover, title }) {
   return (
-    <div className='products'>
-      <img src="" alt="" />
-      <p>titre du produit(id)</p>
+    <div className='product'>
+      <img src={ cover } alt="" />
+      <p>{ title }</p>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-const products = [
+[
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -616,16 +616,4 @@ const products = [
 			"Rivoli"
 		]
 	}
-];
-
-exports.find = () => {
-    return new Promise((resolve, reject) => resolve(JSON.parse(JSON.stringify(products))));
-}
-
-exports.findById = (id) => {
-	return new Promise((resolve, reject) =>
-		resolve(JSON.parse(JSON.stringify(products)).find(product =>
-		product._id == id)
-		)
-	);
-}
+]

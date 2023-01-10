@@ -21,7 +21,7 @@ function Navbar() {
                 </NavLink>
             </li>
             <li className='about'>
-                <NavLink to='/À-propos'>
+                <NavLink to='/A-propos'>
                     <h5>A Propos</h5>
                 </NavLink>
             </li>

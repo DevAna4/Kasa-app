@@ -5,6 +5,7 @@ import Accommodation from '../../pages/Accommodation';
 import About from '../../pages/About';
 import Error404 from '../../pages/Error404';
 import NavBar from '../Navbar';
+import Footer from '../Footer';
 
 function index() {
   return (
@@ -16,6 +17,7 @@ function index() {
           <Route path='/A-propos' element={<About />} />
           <Route path='/404' element={<Error404 />} />
         </Routes>
+      <Footer />
     </Router>
     
   )
