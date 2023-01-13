@@ -5,12 +5,16 @@ import React from 'react';
 function ContainerAbout() {
   return (
     <div>
+      <div className='banner__about'>
       <img src="" alt="" />
+      </div>
       <div>
         <ul className='container__about'>
             <div>
-              <li className='container__about__content'>Fiabilité</li>
-              <span>vector</span>
+              <div className='container__about__content'>
+              <li>Fiabilité</li>
+              <span></span>
+              </div>
               <p className='container__about__text'>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>  
             </div>
             <div>

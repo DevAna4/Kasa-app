@@ -1,0 +1,27 @@
+.container__about{
+    display: flex;
+    flex-direction: column;
+    
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: $color-primary;
+        color: $color-text-card;
+        border-radius: 5px;
+
+        & span {
+            background: url(../../assets/Vector.png);
+            background-repeat: no-repeat;
+            
+            width: 14px;
+            height: 24px;
+            
+        }
+
+    }
+    //## Mobile screen ##//
+
+}
