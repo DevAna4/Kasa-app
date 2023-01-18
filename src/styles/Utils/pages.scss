@@ -1,9 +1,7 @@
 body{
     position: relative;
     color: $color-primary;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 24px;
+    @include text;
     margin: 10px 100px 0;
 
     //## Mobile screen ##//

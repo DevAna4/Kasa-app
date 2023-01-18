@@ -1,12 +1,14 @@
 import React from 'react';
-import ContainerAbout from '../components/ContainerAbout';
+import Collapse from '../components/Collapse';
 
-//## Import image ##//
 
 function About() {
   return (
     <div>
-      <ContainerAbout />
+      <div className='banner__about'>
+        <img src="" alt="" />
+      </div>
+      <Collapse />
     </div>
   )
 }
