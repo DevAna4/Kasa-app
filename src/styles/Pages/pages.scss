@@ -3,6 +3,7 @@ body{
     color: $color-primary;
     @include text;
     margin: 10px 100px 0;
+    @include desktop;
 
     //## Mobile screen ##//
     @include desktop-mobile{

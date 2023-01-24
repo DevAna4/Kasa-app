@@ -1,0 +1,104 @@
+.container__collapse {
+
+    &__carrousel {
+        width: 100%;
+        height: 415px;
+
+        & img {
+            width: 100%;
+            height: 415px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        &__arrow {
+            &__left {
+                background: url(../../assets/Vector-RL.png);
+                transform: rotate(180deg);
+                left: 24px;
+                top: 30vh;
+                width: 47px;
+                height: 79px;
+                position: absolute;
+                border-style: none;
+                cursor: pointer;
+                & :hover {
+                    animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                }
+            }
+            
+            &__right {
+                background: url(../../assets/Vector-RL.png);
+                right: 24px;
+                top: 30vh;
+                width: 47px;
+                height: 79px;
+                position: absolute;
+                border-style: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    
+
+//## Part Description Equipments ##//    
+
+    &__all-part {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 75px;
+        align-items: baseline;
+    }
+
+    &__part {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        //width: 46%;
+        
+        & p {
+            transform: scale(0);
+            font-size: 18px;
+            @include text-collapse;
+            list-style: none;
+            padding: 0px;
+        }
+    }
+
+    
+    &__btn-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+        background-color: $color-primary;
+        color: $color-text-card;
+        border-radius: $border-radius-primary;
+        border-style: none;
+        @include text;
+        cursor: pointer;
+
+        & span {
+            background: url(../../assets/Vector.png);
+            @include vector;
+        }
+    }
+}
+
+.show-text {
+    height: max-content;
+
+    & span {
+        //background: url(../../assets/Vector-1.png);
+        @include vector;
+        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    & p {
+        @include text-collapse;
+        height: max-content;
+        animation: fade-in-top 0.4s cubic-bezier(0.390,0.575, 0.565, 1.000) both;
+    }
+}

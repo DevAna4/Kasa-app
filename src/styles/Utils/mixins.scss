@@ -1,6 +1,7 @@
 //
 @mixin desktop {
     @media screen and (max-width: map-get($map: $breakpoints, $key: desktop)) {
+        
         @content;
     }
 }
@@ -14,7 +15,8 @@
 @mixin background-banner {
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: $border-radius-primary;
+    background-position: center;
+    border-radius: $border-radius-tertiary;
 }
 
 @mixin vector {
@@ -29,4 +31,21 @@
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 24px;
+}
+
+@mixin text-collapse {
+    //display: inline-block;
+    font-weight: 400;
+    padding: 30px 16px 16px 16px;
+    margin-top: 0px;
+    border-radius: $border-radius-primary;
+    position: relative;
+    z-index: -1;
+}
+
+@mixin ratings {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px ;
 }

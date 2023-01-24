@@ -5,11 +5,14 @@
 $color-primary: #FF6060;
 $color-text-card: #FFFFFF;
 $color-background: #E5E5E5;
+$color-background-banner: rgba(0, 0, 0, 0.301);
+$color-background-cards: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 $color-footer: black;
 $color-background-secondary: #F7F7F7;
 
 $border-radius-primary: 10px;
 $border-radius-secondary: 5px;
+$border-radius-tertiary: 25px;
 
 
 $breakpoints: (desktop: 1440px);

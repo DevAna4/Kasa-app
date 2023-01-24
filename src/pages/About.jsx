@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutData from '../app/about.json';
 import Collapse from '../components/Collapse';
 
 
@@ -8,7 +9,14 @@ function About() {
       <div className='banner__about'>
         <img src="" alt="" />
       </div>
-      <Collapse />
+      {/*<ContainerAbout />*/}
+      <div className='container__about'>
+        {AboutData.map((data, index) => {
+          return (
+            <Collapse key={index} title={data.title} content={data.content} />
+          )
+        })}
+      </div>
     </div>
   )
 }

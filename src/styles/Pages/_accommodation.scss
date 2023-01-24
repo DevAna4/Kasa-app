@@ -1,0 +1,73 @@
+
+.container__accommodation {
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+      font-size: 36px;  
+      font-weight: 500;
+      margin-bottom: 0px;
+    }
+    
+    &__location {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0px;
+    }
+
+    //##########//
+    //## Host ##//
+    //##########//
+
+    //## Host name & picture ##//
+
+    &__host {
+        position: absolute;
+        right: 0px;
+        text-align: end;
+        width: 200px;
+
+        & p {
+            display: flex;
+            align-items: center;
+            
+        }
+        
+        &__picture {
+            width: 64px;
+            border-radius: 50%;
+            padding-left: 10px;
+        }
+    }
+
+    //## Ratings ##//
+
+    &__ratings {
+            background: url(../../assets/Rating.png);
+            @include ratings;
+    }
+    &__ratings-color {
+        background: url(../../assets/Rating.png);
+        @include ratings;
+    }
+
+    //##########//
+    //## Tags ##//
+    //##########//
+
+    &__tags {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        & li {
+            border-radius: $border-radius-primary;
+            background-color: $color-primary;
+            color: $color-text-card;
+            font-size: 14px;
+            padding: 3px 22px;
+            margin-right: 10px;
+        }
+    }
+}
