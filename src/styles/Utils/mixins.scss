@@ -1,5 +1,6 @@
 //################//
 //## Responsive ##//
+//##  Desktop   ##//
 //################//
 
 @mixin desktop {
@@ -39,6 +40,20 @@
     height: 223px;
     background-color: rgba(0, 0, 0, 0.301);
     border-radius: $border-radius-tertiary;
+}
+
+//###############//
+//### Flexbox ###//
+//###############//
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
 }
 
 //############//

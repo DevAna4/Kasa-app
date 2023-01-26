@@ -1,7 +1,6 @@
 footer {
     background-color: $color-footer;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     align-items:center;
     justify-content: flex-end;
     margin-top: 43px;
@@ -9,7 +8,7 @@ footer {
     height: 175px;
     line-height: 142.6%;
 
-    & p{
+    & p {
         color: $color-text-card;
     }
         
@@ -18,9 +17,8 @@ footer {
         justify-content: center;
         margin: 43px -20px;
 
-        
         & p {
-            font-size: 12px;
+            font-size: $font-size-secondary;
         }
     }
 }

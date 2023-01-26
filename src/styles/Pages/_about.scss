@@ -1,6 +1,5 @@
 .container__about{
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: center;
     margin: 31px auto 159px;
     width: 80%;
@@ -9,5 +8,4 @@
     @include desktop-mobile {
         width: 100%;
     }
-
 }

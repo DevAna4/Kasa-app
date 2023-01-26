@@ -2,17 +2,17 @@
 //## Section Gallery ##//
 //#####################//
 
-.gallery{
+.gallery {
     background: $color-background-secondary;
-    border-radius: 25px;
+    border-radius: $border-radius-tertiary;
     margin-top: 43px;
     padding: 30px 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-
-    //## Mobile screen ##//
+    
+    //### Mobile screen ###//
     @include desktop-mobile {
         background: none;
         margin-top: 10px;
@@ -21,23 +21,21 @@
 }
 
 .card_logement {
-    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
     transition: 0.3s;
     width: 340px;
     height: 340px;
-    border-radius: $border-radius-primary;
     margin: 25px 0.666%;
-    display: flex;
-
+    border-radius: $border-radius-primary;
+    
     & img {
         border-radius: $border-radius-primary;
         width: 100%;
         position: relative;
         object-fit: cover;
         z-index: 1;
-        //filter: brightness(60%);
-        }
-
+    }
+    
     & p {
         display: flex;
         position: absolute;
@@ -46,19 +44,20 @@
         left: 5%;
         bottom: 5%;
         color: $color-text-card;
-        font-size: 18px;
+        font-size: $font-size-primary;
         z-index: 1;
     }
-
-    &_link{
+    
+    &_link {
         text-decoration: none;
     }
     
+    //### Mobile tablet ###//
     @include desktop-tablet {
         margin: 20px 0.666%;
     }
 
-    //## Mobile screen ##//
+    //### Mobile screen ###//
     @include desktop-mobile {
         width: 335px;
         height: 255px;
@@ -66,13 +65,11 @@
     }
 }
 
-
 //#####################//
 //## Component Cards ##//
 //#####################//
 
 .product {
-    //background-color: $color-background-cards;
     display: flex;
     position: relative;
     border-radius: $border-radius-primary;
@@ -80,7 +77,6 @@
     height: 100%;
     z-index: 2;
     object-fit: cover;
-
 
     & img {
         background: black
@@ -90,4 +86,5 @@
     & :hover {
         animation: shadow-drop-br 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
+    
 }

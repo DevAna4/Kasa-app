@@ -21,6 +21,7 @@
             top: 156px;
             width: 47px;
             height: 80px;
+            cursor: pointer;
         }
 
         &__previous {
@@ -31,8 +32,8 @@
             right: 23px;
         }
 
-        //## Mobile screen ##//
-        @include desktop-mobile{
+        //### Mobile screen ###//
+        @include desktop-mobile {
             height: 255px;
 
             &__picture {
@@ -45,7 +46,7 @@
                 width: 12px;
                 height: 20px;
             }
-            &__previous-arrow, &__next-arrow{
+            &__previous-arrow, &__next-arrow {
                 width: 100%;
             }
         }
@@ -56,8 +57,7 @@
     //######################//
     
     &__info {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         position: relative;
     }
     
@@ -69,19 +69,19 @@
     }
     
     &__location {
-        font-size: 18px;
+        font-size: $font-size-primary;
         font-weight: 500;
         margin: 0px;
     }
 
-    //## Mobile screen ##//
+    //### Mobile screen ###//
     @include desktop-mobile {
         &__title {
-            font-size: 18px;
+            font-size: $font-size-primary;
         }
 
         &__location {
-            font-size: 14px;
+            font-size: $font-size-tertiary;
         }
     }
     
@@ -100,7 +100,6 @@
         & p {
             display: flex;
             align-items: center;
-            
         }
         
         &__picture {
@@ -108,43 +107,44 @@
             border-radius: 50%;
             padding-left: 10px;
         }
-
-        //## Mobile tablet ##//
+        
+        //### Mobile tablet ###//
         @include desktop-tablet {
             @include host-responsive;
         }
-
-
-        //## Mobile screen ##//
+        
+        //### Mobile screen ###//
         @include desktop-mobile {
             @include host-responsive;
-
+            
             & p {
-                font-size: 12px;
+                font-size: $font-size-secondary;
                 width: 100px;
             }
-
+            
             &__picture {
                 width: 32px;
             }
-
         }
     }
     
-    //## Ratings ##//
+    //#####################//
+    //###### Ratings ######//
+    //#####################//
     
     &__ratings {
             background: url(../../assets/Rating.png);
             @include ratings;
         }
+
     &__ratings-color {
         background: url(../../assets/Rating.png);
         @include ratings;
     }
 
-    //## Mobile screen ##//
+    //### Mobile screen ###//
     &__ratings, &__ratings-color {
-        @include desktop-mobile{
+        @include desktop-mobile {
             @include ratings-mobile;
         }
     }
@@ -154,30 +154,28 @@
     //######################//
     
     &__tags {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
+        @include flex-row;
+        list-style: none;
 
-        & li {
-            border-radius: $border-radius-primary;
-            background-color: $color-primary;
-            color: $color-text-card;
-            font-size: 14px;
-            padding: 3px 22px;
-            margin-right: 10px;
-            
-        }
-    //## Mobile screen ##//
-    @include desktop-mobile {
-        flex-wrap: wrap;
-        margin: 10px 0 0;
+            & li {
+                border-radius: $border-radius-primary;
+                background-color: $color-primary;
+                color: $color-text-card;
+                font-size: $font-size-tertiary;
+                padding: 3px 22px;
+                margin-right: 10px;         
+            }
 
-        & li {
-            font-size: 10px;
-            border-radius: $border-radius-secondary;
-            margin-bottom: 10px;
-        }
-    }
-        
+        //### Mobile screen ###//
+        @include desktop-mobile {
+            flex-wrap: wrap;
+            margin: 10px 0 0;
+
+            & li {
+                font-size: 10px;
+                border-radius: $border-radius-secondary;
+                margin-bottom: 10px;
+            }
+        }    
     }
 }

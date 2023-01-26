@@ -4,7 +4,7 @@
     //## Banner home ##//
     //#################//
 
-    &__home{
+    &__home {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -15,13 +15,12 @@
             @include background-banner;
         }
 
-        &__text{
+        &__text {
             color: white;
             font-size: 48px;
             word-wrap: normal;
             position: absolute;
-    
-    
+       
             //## Tablet screen ##//
             @include desktop-tablet {
                 width: 59%;
@@ -43,7 +42,6 @@
             & img {
                 background: url(../../assets/eric-muhr-P_XxsdVgtpQ-unsplash-mobile.png);
                 @include background-banner;
-                
             }
         }
     }
@@ -58,7 +56,6 @@
         & img {
             background: url(../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash2.png);
             @include background-banner;
-
         }
         
         //## Mobile screen ##//
@@ -72,6 +69,4 @@
             }
         }
     }
-
-    
 }
