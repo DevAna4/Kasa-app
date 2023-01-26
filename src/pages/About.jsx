@@ -1,7 +1,12 @@
 import React from 'react';
+
+//##### Import Data #####//
 import AboutData from '../app/about.json';
+
+//## Import Components ##//
 import Collapse from '../components/Collapse';
 
+//######################//
 
 function About() {
   return (
@@ -9,7 +14,6 @@ function About() {
       <div className='banner__about'>
         <img src="" alt="" />
       </div>
-      {/*<ContainerAbout />*/}
       <div className='container__about'>
         {AboutData.map((data, index) => {
           return (

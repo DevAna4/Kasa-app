@@ -1,9 +1,16 @@
+//## Import Pictures ##//
 import starColor from "../assets/Rating-color.png";
 import starGrey from "../assets/Rating.png";
 
+//#####################//
+
 function Ratings(props) {
   const rating = props.rating;
+
+  //## Numbers of stars for ratings ##//
   const stars = [1, 2, 3, 4, 5];
+  //#################################//
+  
   return (
     <div className="ratings">
       {stars.map((star) =>

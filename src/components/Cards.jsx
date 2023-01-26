@@ -1,5 +1,3 @@
-// Bloc d'une fiche de la page 'Home'
-
 import React from 'react';
 
 function ContainerProduct({ cover, title }) {

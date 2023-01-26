@@ -1,9 +1,10 @@
 import React from 'react';
-import Logo from '../assets/Logo.png';
 import { NavLink } from 'react-router-dom';
 
-// Import de fichiers
+//## Import Pictures ##//
+import Logo from '../assets/Logo.png';
 
+//####################//
 
 function Navbar() {
   return (

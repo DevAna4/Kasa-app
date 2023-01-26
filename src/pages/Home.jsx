@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-
-import Cards from '../components/Cards';
+import React  from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Home() {
-  const [data, setData] = useState([]);
+//##### Import Data #####//
+import logements from '../app/logements.json';
 
-  useEffect(() => {
-    axios.get("./logements.json").then((res) => setData(res.data));
-  }, []);
+//## Import Components ##//
+import Cards from '../components/Cards';
+
+//######################//
+
+function Home() {
 
   return (
     <div>
@@ -18,7 +18,7 @@ function Home() {
         <p className='banner__home__text'>Chez vous, partout et ailleurs</p>
       </div>
       <section className='gallery' id='products'> 
-        {data.map((appart) => (
+        {logements.map((appart) => (
           <div className="card_logement" key={appart.id}>
             <NavLink to={`/Fiche-Logement/${appart.id}`} className="card_logement_link">
               <Cards cover={appart.cover} title={appart.title} />

@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 
+//## Import Pictures ##//
 import arrowLeft from '../assets/ArrowLeft.png';
 import arrowRight from '../assets/ArrowRight.png'
 
+//####################//
+
 function Carrousel({ slide }) {
   
+  //## Initialise 'visual' à 0 et met à jour 'updateVisual' le state ##//  
   const [ visual, updateVisual ] = useState(0);
 
+  //## Indique le nombre d'image ##//
   const length = slide.length;
-  console.log(length)
-
+  
+  //## Si 'visual' à pour total -1 on retourne à la première image, sinon on passe à la suivante ##//
   const nextSlide = () => {
     updateVisual(visual === length - 1 ? 0 : visual + 1);
   }
@@ -17,7 +22,8 @@ function Carrousel({ slide }) {
   const previousSlide = () => {
     updateVisual(visual === 0 ? length - 1  : visual - 1);
   }
-
+  //##############################################################################################//
+  
   return (
     <div className='container__accommodation__carrousel'>
         {slide.map((picture, index) => {

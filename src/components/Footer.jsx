@@ -1,6 +1,9 @@
 import React from 'react';
+
+//## Import Pictures ##//
 import Logo from '../assets/Logo-BlackAndWhite.png';
 
+//####################//
 
 function Footer() {
   return (
