@@ -1,28 +1,43 @@
 .banner {
 
+    //#################//
     //## Banner home ##//
+    //#################//
+
     &__home{
-        background-color: $color-background-banner;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 100%;
-        height: 223px;
-        border-radius: $border-radius-tertiary;
-
+        @include banner;
         
         & img {
             background: url(../../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png);
-            mix-blend-mode: darken;
             @include background-banner;
-            width: 100%;
-            height: 100%;
         }
-        
+
+        &__text{
+            color: white;
+            font-size: 48px;
+            word-wrap: normal;
+            position: absolute;
+    
+    
+            //## Tablet screen ##//
+            @include desktop-tablet {
+                width: 59%;
+                text-align: left;
+            }
+    
+            //## Mobile screen ##//
+            @include desktop-mobile {
+                font-size: 24px;
+                left: 16px;
+                width: 217px;
+            }
+        }
 
         //## Mobile screen ##//
         @include desktop-mobile {
-            width: 335px;
             height: 111px;
 
             & img {
@@ -33,40 +48,30 @@
         }
     }
     
+    //##################//
     //## Banner about ##//
+    //##################//
     &__about {
-        background: url(../../assets/Background-about.png);
         background-repeat: no-repeat;
-        width: 100%;
-        height: 223px;
-        @include background-banner;
+        @include banner;
+        
+        & img {
+            background: url(../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash2.png);
+            @include background-banner;
+
+        }
         
         //## Mobile screen ##//
         @include desktop-mobile {
             height: 223px;
-            background: url(../../assets/Background-about-mobile.png);
-            background-position: center;
+            
+            & img {
+                background: url(../../assets/gustavo-alves-YOXSC4zRcxw-unsplash1.png);
+                @include background-banner;
+                background-position: center;
+            }
         }
     }
 
     
-}
-
-.background__home{
-    position: relative;
-    width: 100%;
-    &__text{
-        color: white;
-        font-size: 48px;
-        word-wrap: normal;
-        position: absolute;
-
-
-        //## Mobile screen ##//
-        @include desktop-mobile {
-            font-size: 24px;
-            left: 16px;
-            width: 217px;
-        }
-    }
 }

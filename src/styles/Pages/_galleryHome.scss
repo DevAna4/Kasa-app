@@ -21,13 +21,12 @@
 }
 
 .card_logement {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 340px;
     height: 340px;
     border-radius: $border-radius-primary;
     margin: 25px 0.666%;
-    //background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     display: flex;
 
     & img {
@@ -51,8 +50,12 @@
         z-index: 1;
     }
 
-    & link{
+    &_link{
         text-decoration: none;
+    }
+    
+    @include desktop-tablet {
+        margin: 20px 0.666%;
     }
 
     //## Mobile screen ##//
@@ -76,14 +79,15 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    object-fit: cover;
+
 
     & img {
         background: black
         linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     }
-
+    
     & :hover {
         animation: shadow-drop-br 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
     }
 }

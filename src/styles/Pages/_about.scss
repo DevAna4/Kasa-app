@@ -5,4 +5,9 @@
     margin: 31px auto 159px;
     width: 80%;
 
+    //## Mobile screen ##//
+    @include desktop-mobile {
+        width: 100%;
+    }
+
 }

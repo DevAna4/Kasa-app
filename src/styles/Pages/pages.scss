@@ -2,12 +2,15 @@ body{
     position: relative;
     color: $color-primary;
     @include text;
-    margin: 10px 100px 0;
+    margin: 10px auto 0;
     @include desktop;
+    max-width: 1440px;
+    padding: 0 100px 0;
 
     //## Mobile screen ##//
-    @include desktop-mobile{
+    @include desktop-mobile {
         margin: 10px 20px 0;
+        padding: 0;
     }
 }
 

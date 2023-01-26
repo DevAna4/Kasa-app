@@ -15,7 +15,7 @@ function Home() {
     <div>
       <div className='banner__home'>
         <img src="" alt="" />
-        <p className='background__home__text'>Chez vous, partout et ailleurs</p>
+        <p className='banner__home__text'>Chez vous, partout et ailleurs</p>
       </div>
       <section className='gallery' id='products'> 
         {data.map((appart) => (

@@ -5,10 +5,9 @@ import { useParams } from 'react-router-dom';
 import Logements from '../app/logements.json';
 import Collapse from '../components/Collapse';
 
-//import Carrousel from '../components/Carrousel';
+import Carrousel from '../components/Carrousel';
 import Ratings from '../components/Ratings';
 
-//import ContainerInfo from '../components/ContainerInfo';
 
 
 function Accommodation() {
@@ -23,7 +22,7 @@ function Accommodation() {
 
   return (
       <div className='container__accommodation'>
-        {/*<Carrousel slideshow={accommodation.pictures}/>*/}
+        <Carrousel slide={ pictures }/>
         <div className='container__accommodation__info'>
           <h2 className='container__accommodation__title'> { title } </h2>
           <h3 className='container__accommodation__location'> { location } </h3>
@@ -39,13 +38,13 @@ function Accommodation() {
             <p className='container__accommodation__tags'> { tags.map((tags, index) => (
               <li key={index}>{ tags }</li>
             )) } </p>
+          </div>
 
-            <div className='container__collapse__all-part'>
-              <Collapse title={'Description'} content={description}/>
-              <Collapse title={'Equipements'} content={equipments.map((equipment, index) => (
-                  <li key={index}>{ equipment }</li>
-                )) } />
-            </div>
+          <div className='container__collapse__all-part'>
+            <Collapse title={'Description'} content={description}/>
+            <Collapse title={'Equipements'} content={equipments.map((equipment, index) => (
+                <li key={index}>{ equipment }</li>
+              )) } />
           </div>
         </div>
       </div>

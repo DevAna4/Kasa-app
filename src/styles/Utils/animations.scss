@@ -8,8 +8,9 @@
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 100% {
-    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-            box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 12px 12px 20px -5px rgba(0, 0, 0, 0.35);
+            box-shadow: 12px 12px 20px -5px rgba(0, 0, 0, 0.35);
+            transform: scale(1.01);
 }
 }
 @keyframes shadow-drop-br {
@@ -18,17 +19,18 @@
             box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 100% {
-    -webkit-box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
-            box-shadow: 12px 12px 20px -12px rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 12px 12px 20px -5px rgba(0, 0, 0, 0.35);
+            box-shadow: 12px 12px 20px -5px rgba(0, 0, 0, 0.35);
+            transform: scale(1.01);
 }
 }
 
 
-//##############################//
-//## Animation Collapse About ##//
-//##############################//
+//########################//
+//## Animation Collapse ##//
+//########################//
 
-//######### Flip span #########//
+//###### Flip span ######//
 
 @-webkit-keyframes flip-horizontal-bottom {
     0% {
@@ -84,43 +86,7 @@
     }
 }
 
-//########### OUT ###########//
-
-@-webkit-keyframes fade-out-top {
-0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-    background: $color-background-secondary;
-}
-100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-    background: $color-background-secondary;
-    height: 0px;
-}
-}
-@keyframes fade-out-top {
-0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-    background: $color-background-secondary;
-}
-100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-    background: $color-background-secondary;
-    height: 0px;
-}
-}
-  
-
-//#############//
-//##  ##//
-//#############//
+//########## Shadow ##########//
 
  @-webkit-keyframes shadow-inset-center {
     0% {
