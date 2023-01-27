@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 //##### Import Data #####//
 import Logements from '../app/logements.json';
@@ -8,6 +8,8 @@ import Logements from '../app/logements.json';
 import Collapse from '../components/Collapse';
 import Carrousel from '../components/Carrousel';
 import Ratings from '../components/Ratings';
+import { useEffect } from 'react';
+//import Error404 from '../pages/Error404';
 
 //######################//
 
@@ -15,10 +17,17 @@ function Accommodation() {
   
   //## Récupération du fichier json ##//
   const { logementId } = useParams();
+  const navigate = useNavigate();
   
   const accommodation = Logements.find((accommodation) => accommodation.id === logementId);
   
   const { title, location, rating, host, equipments, description, pictures, tags } = accommodation;
+  
+  useEffect(() => {
+    if (accommodation.length === 0)  {
+      navigate('*');
+    } 
+  },);
   //##################################//
 
   return (

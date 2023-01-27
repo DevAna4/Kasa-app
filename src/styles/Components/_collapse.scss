@@ -31,7 +31,7 @@
         justify-content: space-evenly;
         
         & p {
-            visibility: collapse;
+            display: none;
             font-size: $font-size-primary;
             @include text-collapse;
             list-style: none;
@@ -87,7 +87,8 @@
     }
 
     & p {
-        visibility: visible;
+        display: inline-flex;
+        flex-direction: column;
         @include text-collapse;
         height: max-content;
         margin: 0 0 20px;
