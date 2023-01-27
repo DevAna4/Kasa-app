@@ -111,6 +111,10 @@
         //### Mobile tablet ###//
         @include desktop-tablet {
             @include host-responsive;
+
+            & p {
+                width: min-content
+            }
         }
         
         //### Mobile screen ###//

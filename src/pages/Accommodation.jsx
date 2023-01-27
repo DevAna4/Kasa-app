@@ -17,7 +17,6 @@ function Accommodation() {
   const { logementId } = useParams();
   
   const accommodation = Logements.find((accommodation) => accommodation.id === logementId);
-  console.log(accommodation);
   
   const { title, location, rating, host, equipments, description, pictures, tags } = accommodation;
   //##################################//
