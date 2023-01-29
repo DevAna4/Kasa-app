@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 //##### Import Data #####//
 import logements from '../app/logements.json';
+import Banner from '../components/Banner';
 
 //## Import Components ##//
 import Cards from '../components/Cards';
@@ -12,12 +13,11 @@ import Cards from '../components/Cards';
 function Home() {
 
   return (
-    <div>
+    <div className='body-page'>
       <div className='banner__home'>
-        <img src="" alt="" />
-        <p className='banner__home__text'>Chez vous, partout et ailleurs</p>
+        <Banner text={"Chez vous, partout et ailleurs"} />
       </div>
-      <section className='gallery' id='products'> 
+      <section className='gallery'> 
         {logements.map((appart) => (
           <div className="card_logement" key={appart.id}>
             <NavLink to={`/Fiche-Logement/${appart.id}`} className="card_logement_link">

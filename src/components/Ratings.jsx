@@ -4,8 +4,7 @@ import starGrey from "../assets/Rating.png";
 
 //#####################//
 
-function Ratings(props) {
-  const rating = props.rating;
+function Ratings({rating}) {
 
   //## Numbers of stars for ratings ##//
   const stars = [1, 2, 3, 4, 5];

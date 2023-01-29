@@ -8,7 +8,7 @@ import Logo from '../assets/Logo.png';
 
 function Navbar() {
   return (
-    <nav>
+    <nav className='body-page'>
       <div className='nav-container'>
         <NavLink to='/'>
             <div className='logo'>

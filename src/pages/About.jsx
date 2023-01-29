@@ -2,6 +2,7 @@ import React from 'react';
 
 //##### Import Data #####//
 import AboutData from '../app/about.json';
+import Banner from '../components/Banner';
 
 //## Import Components ##//
 import Collapse from '../components/Collapse';
@@ -10,9 +11,9 @@ import Collapse from '../components/Collapse';
 
 function About() {
   return (
-    <div>
+    <div className='body-page'>
       <div className='banner__about'>
-        <img src="" alt="" />
+        <Banner />
       </div>
       <div className='container__about'>
         {AboutData.map((data, index) => {

@@ -1,11 +1,21 @@
 .container__about{
     @include flex-column;
     justify-content: center;
-    margin: 31px auto 159px;
+    margin: 31px auto 201px;
     width: 80%;
+    
+    & p {
+        font-size: 24px;
+    }
 
     //## Mobile screen ##//
     @include desktop-mobile {
         width: 100%;
+        margin-top: 19px;
+
+        & p {
+            font-size: 12px;
+        }
     }
 }
+

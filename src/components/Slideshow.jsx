@@ -6,9 +6,9 @@ import arrowRight from '../assets/ArrowRight.png'
 
 //####################//
 
-function Carrousel({ slide }) {
+function Slideshow({ slide }) {
   
-  //## Initialise 'visual' à 0 et met à jour 'updateVisual' le state ##//  
+  //## Initialise 'visual' à 0 et met à jour 'updateVisual' ##//  
   const [ visual, updateVisual ] = useState(0);
 
   //## Indique le nombre d'image ##//
@@ -43,8 +43,11 @@ function Carrousel({ slide }) {
             </div>
           </>
         ) : null}
+        <div className='container__accommodation__carrousel__pagination'>
+          {visual + 1}/{length}
+        </div>
     </div>
   );
 }
 
-export default Carrousel
+export default Slideshow

@@ -1,5 +1,11 @@
 .banner {
 
+    @include banner;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:initial;
+
     //#################//
     //## Banner home ##//
     //#################//
@@ -8,6 +14,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-top: 53px;
         @include banner;
         
         & img {
@@ -34,14 +41,17 @@
                 width: 217px;
             }
         }
-
+        
         //## Mobile screen ##//
         @include desktop-mobile {
             height: 111px;
-
+            margin: 0;
+            border-radius: $border-radius-primary;
+            
             & img {
                 background: url(../../assets/eric-muhr-P_XxsdVgtpQ-unsplash-mobile.png);
                 @include background-banner;
+                border-radius: $border-radius-primary;
             }
         }
     }
@@ -51,6 +61,7 @@
     //##################//
     &__about {
         background-repeat: no-repeat;
+        margin-top: 53px;
         @include banner;
         
         & img {
@@ -61,6 +72,7 @@
         //## Mobile screen ##//
         @include desktop-mobile {
             height: 223px;
+            margin-top: 0;
             
             & img {
                 background: url(../../assets/gustavo-alves-YOXSC4zRcxw-unsplash1.png);

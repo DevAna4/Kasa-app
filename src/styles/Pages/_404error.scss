@@ -1,6 +1,7 @@
 .container__404 {
         @include flex-column;
         align-items: center;
+        margin-top: 130px;
 
     &__title {
         font-size: 288px;
@@ -10,17 +11,18 @@
 
     &__text {
         font-size: 36px;
+        margin-top: 25px;
     }
 
     &__url {
         text-decoration: underline;
         font-size: $font-size-primary;
-        margin: 182px 0 159px;
+        margin: 150px 0 159px;
     }
 
     //## Mobile screen ##//
     @include desktop-mobile {
-        margin-top: 195px;
+        margin-top: 165px;
         
         &__title {
             font-size: 96px;
