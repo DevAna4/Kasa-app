@@ -73,11 +73,13 @@
         @include desktop-mobile {
             height: 223px;
             margin-top: 0;
+            border-radius: $border-radius-primary;
             
             & img {
                 background: url(../../assets/gustavo-alves-YOXSC4zRcxw-unsplash1.png);
                 @include background-banner;
                 background-position: center;
+                border-radius: $border-radius-primary;
             }
         }
     }
