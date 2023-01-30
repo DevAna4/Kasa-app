@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color:initial;
+    height: 223px;
 
     //#################//
     //## Banner home ##//
@@ -15,6 +16,7 @@
         justify-content: space-around;
         align-items: center;
         margin-top: 53px;
+        height: 223px;
         @include banner;
         
         & img {
@@ -82,5 +84,9 @@
                 border-radius: $border-radius-primary;
             }
         }
+    }
+
+    @include desktop-mobile {
+        height: 100%;
     }
 }

@@ -15,7 +15,7 @@ function Home() {
   return (
     <div className='body-page'>
       <div className='banner__home'>
-        <Banner text={"Chez vous, partout et ailleurs"} />
+        <Banner text={"Chez vous, partout et ailleurs"}/>
       </div>
       <section className='gallery'> 
         {logements.map((appart) => (
